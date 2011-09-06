@@ -1,0 +1,4 @@
+# Generated with Simple_gemset 
+rvm use 'ruby-1.9.2-p290'
+rvm gemset create 'jsonfiles'
+rvm gemset use 'jsonfiles'

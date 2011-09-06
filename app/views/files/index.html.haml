@@ -1,0 +1,11 @@
+.directories
+  - @files.each do |file|
+    -if file[:directory?]
+      .directory
+        = link_to file[:name], :path => file[:target_path]
+
+.files
+  - @files.each do |file|
+    - unless file[:directory?]
+      .file
+        = link_to file[:name], :path => file[:target_path]
