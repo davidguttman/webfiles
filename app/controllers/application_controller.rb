@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 private
 
   def set_dir
-    @base_path = PATH_CONFIG[:base_path]
+    @base_path = PATH_CONFIG["base_path"]
   
     @target_path = File.expand_path("#{params[:path] || "/"}")
     @page_title = "#{@target_path}"
