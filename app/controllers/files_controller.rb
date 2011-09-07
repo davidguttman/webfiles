@@ -35,7 +35,7 @@ private
       name = File.basename full_path
       is_directory = File.directory?(full_path)
       mtime = File.mtime(full_path)
-      extname = File.extname(full_path).downcase
+      extname = File.extname(full_path).downcase.gsub('.', '')
       target_path = full_path[PATH_CONFIG["base_path"].size-1..-1] 
       target_path = "/" if target_path == ""
 
