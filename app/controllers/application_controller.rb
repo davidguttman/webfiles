@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
 private
 
   def set_dir
+    
+    unless params[:path]
+      render :text => '' 
+      return
+    end
+    
     @base_path = PATH_CONFIG["base_path"]
   
     @target_path = File.expand_path("#{params[:path] || "/"}")
